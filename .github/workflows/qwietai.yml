@@ -31,7 +31,7 @@ jobs:
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app NestMono \
           --tag branch=${{ github.head_ref }} \
-          --tag app.group= Monosample1 \
+          --tag app.group=Monosample1 \
           --js . 
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
@@ -58,8 +58,8 @@ jobs:
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app NestMono-Modules \
           --tag branch=${{ github.head_ref }} \
-          --tag app.group= Monosample1 Can you please provide me with access to this document?
-          --js libs/modules
+          --tag app.group=Monosample1 \
+          --js libs/modules/.
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
@@ -85,8 +85,8 @@ jobs:
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app NestMono-Utils \
           --tag branch=${{ github.head_ref }} \
-          --tag app.group= Monosample1 \
-          --js libs/utils
+          --tag app.group=Monosample1 \
+          --js libs/utils/.
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
